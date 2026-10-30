@@ -1,7 +1,7 @@
 /** Commercial destinations and contextual attribution: intentionally separate from the finance model. */
 export const commercialConfig = Object.freeze({
   productId: 'holiday-inventory-cash-gap-calculator',
-  canonicalUrl: null, // set ONLY after a verified production calculator URL exists
+  canonicalUrl: 'https://holiday-inventory-cash-gap-calculat.vercel.app/', // owner-supplied Vercel production URL
   primary: {
     label: 'Explore Inventory Funding Options',
     url: 'https://www.distilledfunding.com/apply',
