@@ -23,11 +23,13 @@
 | Main funding page live, business intake visible | PASS (public URL only) | `https://www.distilledfunding.com/apply` visited/read 2026-10-29 |
 | Tally destination appropriate | UNVERIFIED / DISABLED | Form URL inaccessible to public verification |
 | Live email form | INTENTIONALLY NOT IMPLEMENTED | No authorized receiving endpoint |
-| External write/deployment | NOT PERFORMED | Separate approval required |
+| Vercel deployment | OWNER-REPORTED LIVE | Production URL supplied by owner: https://holiday-inventory-cash-gap-calculat.vercel.app/; cannot independently fetch in this environment |
+| Browser QA | OWNER-REPORTED PASS | Owner stated browser test passed; device matrix and evidence not provided |
+| Production SEO metadata | PATCH PROPOSED | Canonical, Open Graph, Twitter card, favicon and application icon added on PR branch; recheck after merge and deployment |
 
-## Browser/iframe QA still required
+## Browser/iframe QA — owner reports pass; independent verification pending
 
-A Chromium headless attempt was made, but it **hung before rendering even `about:blank`** in this container, including with `--no-sandbox` and `--disable-gpu` flags. A screenshot or interactive browser test **was not completed**. The following need a working desktop/mobile browser before final production sign-off:
+The owner reports that the site passed browser testing. A previous isolated Chromium attempt failed before rendering; in this review the public website could not be independently retrieved, so the specific browser/iframe checks below are not individually certified by this report. The following need a working desktop/mobile browser before final production sign-off:
 
 - [ ] Standalone at 1440×900 and 390×844: all controls, SVG, results, FAQ, actions and print report.
 - [ ] Embedded at **940×1200**, **768×1200**, **390×1200** and **320×1200**. Check `document.documentElement.scrollWidth <= innerWidth` in the iframe, and inspect the bottommost control after opening each tab.
@@ -39,6 +41,15 @@ A Chromium headless attempt was made, but it **hung before rendering even `about
 - [ ] Confirm no console errors and keyboard/screen-reader navigation.
 - [ ] Confirm live Vercel landing page and Vercel embed URLs and verify Wix does not clip the iframe.
 - [ ] Confirm primary CTA navigates, and user can complete destination flow (no test applicant submission without consent).
-- [ ] Set canonical to actual domain after deployment and check metadata.
+- [x] Prepare canonical and metadata changes targeting the owner-supplied deployment URL (pending PR merge/production verification).
 
-**Release judgment:** Financial model and source package are ready for integration review; UI **not yet certified** as fully browser-tested production-ready. Do not present visual/iframe QA as complete until tested in a working browser.
+**Release judgment:** Owner reports the deployed UI works. Financial tests passed in the original package. Production-specific metadata and embed URL updates are prepared via PR. Independent browser and iframe QA are not certified by this report; retain unresolved device checks until recorded evidence exists.
+
+
+## Deployment reference
+
+- Production: https://holiday-inventory-cash-gap-calculat.vercel.app/
+- Embed: https://holiday-inventory-cash-gap-calculat.vercel.app/embed.html
+- GitHub: https://github.com/JFeimster/holiday-inventory-cash-gap-calculator
+- Notion: https://myfunding.notion.site/holiday-inventory-cash-gap-calculator
+- Asset references use existing PNGs committed to `assets/images/`. The missing dedicated 32×32 file is not claimed as shipped; the 512×512 favicon can be scaled by the browser.
