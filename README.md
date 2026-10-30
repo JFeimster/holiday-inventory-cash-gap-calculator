@@ -1,3 +1,5 @@
+<img width="1672" height="941" alt="Image" src="https://github.com/user-attachments/assets/b5cca213-15ab-4563-bc11-5ec1b3d1ed9d" />
+
 # Holiday Inventory Cash-Gap Calculator
 
 Moonshine Capital / Distilled Funding · dependency-free inventory cash-flow calculator and Wix embed.
