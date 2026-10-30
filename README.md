@@ -6,6 +6,17 @@ Moonshine Capital / Distilled Funding · dependency-free inventory cash-flow cal
 
 **Status:** GitHub/Vercel-ready local package. Not yet pushed, deployed, or installed in Wix. Financial unit tests pass; actual browser/iframe visual QA and live CTA click-through need final operator verification.
 
+## Watch: Inventory Rich, Cash Poor?
+
+Strong holiday sales do not always mean strong cash flow. Supplier invoices can come due before marketplace or customer payouts arrive.
+
+- **35-second explainer:** [Inventory Rich, Cash Poor? — YouTube Short](https://youtube.com/shorts/1_aUwrZoYTM)
+- **Live calculator:** [Holiday Inventory Cash-Gap Calculator](https://holiday-inventory-cash-gap-calculat.vercel.app/)
+- **Production record:** [Canonical Notion video page](https://myfunding.notion.site/inventory-rich-cash-poor)
+- **Production and distribution notes:** [Short reference](docs/media/inventory-rich-cash-poor.md)
+
+*Video figures and dates are illustrative. The calculator produces estimates, not funding approvals or lender quotes.*
+
 ## What you get
 
 - `index.html` — full standalone SEO-friendly application, methodology, FAQ, print report.
